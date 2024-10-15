@@ -23,6 +23,7 @@ def output(status, username, password, target, output_file_name):
     except Exception as output_err:
         LOGGER.critical("[!] Error writing to output file: {}".format(output_err))
 
+# Stolen from: https://github.com/xFreed0m/ADFSpray
 def adfs_attempts(users, passes, targets, output_file_name, sleep_time, random, min_sleep, max_sleep, verbose):
     working_creds_counter = 0  # zeroing the counter of working creds before starting to count
 
